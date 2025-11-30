@@ -1,0 +1,36 @@
+num_cars: 10
+
+strategy_distribution:
+  aggressive: 3
+  balanced: 4
+  cautious: 3
+
+track:
+  type: circuit
+  radius_x: 80
+  radius_y: 60
+  width: 14
+  num_lanes: 5
+
+controller:
+  desired_speed:
+    aggressive: 25
+    balanced: 18
+    cautious: 14
+  a_max: 2.5
+  b_max: 4.5
+  min_gap: 2.0
+  reaction_time: 0.3
+  lookahead_distance: 8.0
+  wheelbase: 2.5
+
+simulation:
+  laps: 3
+  dt: 0.05
+  collision_radius: 3.0
+  time_limit: 300.0
+  near_miss_ttc_threshold: 2.0
+  elimination:
+    enabled: true
+    elimination_chance: 6  # Threshold (1-10, if roll < 6, eliminate). Set to 0 to disable
+
